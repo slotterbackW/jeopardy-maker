@@ -1,3 +1,27 @@
 body {
     margin: 0;
 }
+
+/*
+    Not sure this is the right place for these styles, but it will need to be shared between
+    both the create board page and the show board page, so putting it here for now.
+*/
+
+.categories-row {
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.categories-row>li {
+    list-style: none;
+}
+
+.category-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80px;
+    background-color: #5DADE2;
+}

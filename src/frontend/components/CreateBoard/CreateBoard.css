@@ -1,0 +1,8 @@
+.square-add-button {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}

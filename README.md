@@ -1,4 +1,4 @@
-# jeapordy-maker
+# jeopardy-maker
 An online tool for creating jeapordy quiz games.
 
 ## Set up

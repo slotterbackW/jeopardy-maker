@@ -22,3 +22,13 @@ yarn run start
 
 ### Backend
 TODO
+
+## Database Design
+Here is our schema for the database:
+
+![Database schema](./readme_images/database_design.png)
+
+Users can create multiple boards which contain multiple categories and questions.
+
+When playing a game, participants for the game are stored as JSON objects in localstorage. This is so that they'll
+persist through refreshes, but there isn't any overhead for storing them in the database.

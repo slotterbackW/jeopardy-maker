@@ -3,3 +3,4 @@ src/frontend/.parcel-cache/*
 src/frontend/dist/*
 .env
 .flaskenv
+Pipfile.lock

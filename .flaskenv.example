@@ -1,3 +1,0 @@
-FLASK_APP=backend
-SECRET_KEY=needtoadd
-FLASK_ENV=development

@@ -1,8 +1,35 @@
 .square-add-button {
-    display: flex;
+    display: inline-flex;
     height: 80px;
     width: 80px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 0 10px;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.25s ease-in-out 0s, box-shadow 0.1s ease-in-out 0s, background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s, outline-color 0.1s ease-in-out 0s, z-index 0.25s ease-in-out 0s;
+    margin: 0px;
+    border: 1px solid rgb(31, 115, 183);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 0px 1.07143em;
+    font-size: 14px;
+    background-color: transparent;
+    color: rgb(31, 115, 183);
+}
+
+.square-add-button:hover {
+    border-color: rgb(20, 74, 117);
+    background-color: rgba(31, 115, 183, 0.08);
+    color: rgb(20, 74, 117);
+}
+
+.square-add-button>i {
+    font-size: 24px;
+    margin-bottom: 5px;
 }

@@ -1,11 +1,19 @@
 body {
     margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /*
     Not sure this is the right place for these styles, but it will need to be shared between
     both the create board page and the show board page, so putting it here for now.
 */
+
+.board-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
 
 .categories-row {
     padding: 0;
@@ -19,9 +27,42 @@ body {
 }
 
 .category-card {
+    position: relative;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     height: 80px;
-    background-color: #5DADE2;
+    background-color: #2980B9;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.questions-grid {
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.questions-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-button-light {
+    color: #E5E7E9;
+}
+
+.icon-button-light:hover {
+    color: #F8F9F9;
 }

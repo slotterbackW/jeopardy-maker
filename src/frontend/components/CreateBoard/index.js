@@ -27,7 +27,7 @@ const CreateBoard = () => {
     const [categories, setCategories] = useState([])
 
     const handleAddCategory = useCallback(() => {
-        setCategories(categories.concat({ id: ++categoryId, title: 'category', questions: [] }))
+        setCategories(categories.concat({ id: ++categoryId, title: 'Category', questions: [] }))
     })
 
     const handleDeleteCategory = useCallback((categoryId) => {
@@ -36,7 +36,9 @@ const CreateBoard = () => {
 
     return (
         <div>
-            <input type="text" placeholder="Give your board a name..." />
+            <div className='board-title-container'>
+                <input type="text" placeholder="Give your board a name..." />
+            </div>
             <ul className="categories-row" style={{ gridTemplateColumns: '1fr '.repeat(categories.length + 1) }}>
                 {categories.map(category => {
                     return (
@@ -45,7 +47,25 @@ const CreateBoard = () => {
                         </li>
                     )
                 })}
-                <button className='square-add-button' onClick={() => handleAddCategory()}>Add category</button>
+                <button className='square-add-button' onClick={() => handleAddCategory()}><i class="fa-solid fa-plus"></i>Add category</button>
+            </ul>
+            <ul className='questions-grid' style={{ gridTemplateColumns: '1fr '.repeat(categories.length + 1) }}>
+                {categories.map(category => {
+                    return (
+                        <li key={category.id}>
+                            <ul className='questions-column'>
+                                {category.questions.map(question => {
+                                    return (
+                                        <li key={question.id}>
+                                            <span>{question.title}</span>
+                                        </li>
+                                    )
+                                })}
+                                <button className='square-add-button' onClick={() => alert("Add question")}><i class="fa-solid fa-plus"></i>Add question</button>
+                            </ul>
+                        </li>
+                    )
+                })}
             </ul>
         </div >
     )
